@@ -11,30 +11,30 @@ P. 736, Challenge 3, houseType Classes
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "HouseType.hpp"													//C++ naming convention for header files is .hpp, .h is for C
+#include "HouseType.hpp"									//C++ naming convention for header files is .hpp, .h is for C
 
-using std::cout;															//using specific calls because 'using namespace std' bugs out <string> 
+using std::cout;										//using specific calls because 'using namespace std' bugs out <string> 
 using std::endl;
 using std::cin;
 
 //Function Prototypes
 
-void welcomeUser();															//Function to welcome user
-char inputValidation(char&);												//Function for input validation
+void welcomeUser();										//Function to welcome user
+char inputValidation(char&);									//Function for input validation
 
 int main()
 
 {
-	char runAgain = 'Y';													//Variable to run program again, default to yes to start
+	char runAgain = 'Y';									//Variable to run program again, default to yes to start
 
-	std::string houseStyle = "";											//Variable declaration for user input
+	std::string houseStyle = "";								//Variable declaration for user input
 	int houseBedrooms, houseBathrooms, carsGarage, houseYear, sqFootage;
 	double housePrice, taxPercent, houseTax;
 
 
-	welcomeUser();															//Call introduction
+	welcomeUser();										//Call introduction
 
-	while (toupper(runAgain) == 'Y')										//While 'Y', run program, else quits
+	while (toupper(runAgain) == 'Y')							//While 'Y', run program, else quits
 
 	{
 		//Get the user input for the house details
@@ -71,7 +71,7 @@ int main()
 		cin >> taxPercent;
 		cout << endl;
 
-		houseTax = housePrice * taxPercent;									//calculate house tax based on price of house and tax percentage
+		houseTax = housePrice * taxPercent;						//calculate house tax based on price of house and tax percentage
 
 		//Assign user input to houseOne object of the HouseType Class
 
@@ -83,11 +83,11 @@ int main()
 
 		cout << "\tHere are the details of the house you entered:\n\n";
 
-		houseOne.print();													//Call HouseType print function for user created house
+		houseOne.print();								//Call HouseType print function for user created house
 
 		cout << "\n\tHere are the details of the house with the default constructor:\n\n";
 
-		houseTwo.print();													//Call HouseType print function for user created house
+		houseTwo.print();								//Call HouseType print function for user created house
 		
 		cout << "\n\nWould you like to run program again? Please enter 'Y' or 'N':\n\n";
 
@@ -95,7 +95,7 @@ int main()
 
 		cout << endl;
 		
-		runAgain = inputValidation(runAgain);								//User Validation of 'Y' or 'N'
+		runAgain = inputValidation(runAgain);						//User Validation of 'Y' or 'N'
 
 
 	}
